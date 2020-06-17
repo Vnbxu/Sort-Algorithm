@@ -1,1 +1,1 @@
-Sorting Algorithm notes.
+Algorithm study notes.
