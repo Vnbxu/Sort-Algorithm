@@ -35,7 +35,7 @@ void bucketSort(vector<int>& nums) {
 	vector<ListNode*> buckets(bucketNum, nullptr);
 	for (auto& bucket : buckets)
 		bucket = new ListNode(-1);
-	for (auto& num : nums) {
+	for (const auto& num : nums) {
 		int index = (num - minVal) / nums.size();
 		insert(buckets, index, num);
 	}

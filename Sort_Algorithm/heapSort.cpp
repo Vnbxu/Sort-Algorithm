@@ -22,14 +22,14 @@ void buildHeap(vector<T>& tree) {
 	int nodeParent = (lastNode - 1) / 2;
 	while (nodeParent >= 0) {
 		heapify(tree, tree.size(), nodeParent);
-		nodeParent--;
+		--nodeParent;
 	}
 }
 
 template<typename T>
 void heapSort(vector<T>& tree) {
 	buildHeap(tree);
-	for (int node = tree.size() - 1; node >= 0; node--) {
+	for (int node = tree.size() - 1; node >= 0; --node) {
 		swap(tree, 0, node);
 		heapify(tree, node, 0);
 	}
